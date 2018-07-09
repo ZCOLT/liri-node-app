@@ -12,8 +12,9 @@ spotify.search({ type: 'track', query: process.argv[2] } , function (err, data) 
     return console.log('Error ' + err);
 }
 // console.log(data.tracks.items[0])
+console.log("Song Name: " + data.tracks.items[0].name)
 console.log("Artist: " + data.tracks.items[0].artists[0].name);
 console.log("Album: " + data.tracks.items[0].album.name)
 console.log("Release Date: " + data.tracks.items[0].album.release_date);
-
+console.log("Link: " + data.tracks.items[0].external_urls.spotify)
 })
